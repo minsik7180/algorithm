@@ -17,6 +17,11 @@ public class PhysicalExamination {
 			this.vision = vision;
 		}	
 	}
+	static void visionstar(double vision) {
+		for(int i=0; i<vision; i++) {
+			System.out.print("*");
+		}
+	}
 	 
 	// 키의 평균값을 구함
 	static double aveHeight(PhyscData[] dat) {  //배열을 받고 배열의 값을 다 더한뒤 배열의 길이로 나누는 함수 == 평균
@@ -48,7 +53,7 @@ public class PhysicalExamination {
 				new PhyscData("홍연의",171,1.5),
 				new PhyscData("이수진",168,0.4),
 				new PhyscData("김영준",174,1.2),
-				new PhyscData("박용규",169,0.8),
+				new PhyscData("박용규",169,1.2),
 		};
 		int[] vdist = new int[VMAX]; //시력분포 인덱스가 시력임
 		
@@ -64,7 +69,9 @@ public class PhysicalExamination {
 		
 		System.out.println("\n시력 분포");
 		for(int i=0; i<VMAX; i++) {
-			System.out.printf("%3.1f~ :%2d명\n", i/10.0,vdist[i]);
+			System.out.printf("%3.1f~ : " , i/10.0);
+			visionstar(vdist[i]);
+			System.out.println();			
 		}	
 	}
 	
