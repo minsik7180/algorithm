@@ -43,6 +43,9 @@ public class PhysicalExamination {
 				dist[(int)(dat[i].vision * 10)]++; // 시력 분포도 
 	}
 	
+	
+	
+	
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		
@@ -69,6 +72,7 @@ public class PhysicalExamination {
 		
 		System.out.println("\n시력 분포");
 		for(int i=0; i<VMAX; i++) {
+//			System.out.printf("%3.1f~ :%2d명\n" ,i /10.0, vdist[i]);
 			System.out.printf("%3.1f~ : " , i/10.0);
 			visionstar(vdist[i]);
 			System.out.println();			
