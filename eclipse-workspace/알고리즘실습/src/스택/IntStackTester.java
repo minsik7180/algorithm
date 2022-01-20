@@ -2,7 +2,7 @@ package 스택;
 
 import java.util.Scanner;
 
-import 스택.IntStack.EmptyIntStackExeption;
+import 스택.IntStack.EmptyIntStackException;
 
 public class IntStackTester {
 
@@ -36,7 +36,7 @@ public class IntStackTester {
 					try {
 						x=s.pop();
 						System.out.println("팝한 데이터는 " + x + "입니다");
-					}catch (IntStack.EmptyIntStackExeption e) {
+					}catch (IntStack.EmptyIntStackException e) {
 						System.out.println("스택이 비어있습니다 ");
 					}
 					break;
@@ -45,7 +45,7 @@ public class IntStackTester {
 					try {
 						x = s.peek();
 						System.out.println("피크 한 데이터는 " + x + "입니다");
-					}catch(IntStack.EmptyIntStackExeption e) {
+					}catch(IntStack.EmptyIntStackException e) {
 						System.out.println("스택이 비어있습니다");
 					}
 					break;

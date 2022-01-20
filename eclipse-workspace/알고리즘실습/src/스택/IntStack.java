@@ -7,8 +7,8 @@ public class IntStack {
 	
 	
 	//스택이 비어있음 
-	public class EmptyIntStackExeption extends RuntimeException{
-		public EmptyIntStackExeption() { }
+	public class EmptyIntStackException extends RuntimeException{
+		public EmptyIntStackException() { }
 	}
 	//스택이 가득 참 
 	public class OverflowIntStackException extends RuntimeException{
@@ -31,16 +31,16 @@ public class IntStack {
 		return stk[ptr++] = x;
 	}
 	
-	public int pop() throws EmptyIntStackExeption{
+	public int pop() throws EmptyIntStackException{
 		if(ptr <= 0)
-			throw new EmptyIntStackExeption();
+			throw new EmptyIntStackException();
 		
 		return stk[--ptr];
 	}
 	
-	public int peek() throws EmptyIntStackExeption{
+	public int peek() throws EmptyIntStackException{
 		if(ptr <= 0)
-			throw new EmptyIntStackExeption();
+			throw new EmptyIntStackException();
 		return stk[ptr -1];
 	}
 	public int indexOf(int x) {
